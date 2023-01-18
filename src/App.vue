@@ -1,17 +1,23 @@
 <template>
-  <h1>{{ title }}</h1>
+  <!-- <h1>{{ title }}</h1>
   <ul>
     <li v-for="post in posts">
       {{ post.title }}
     </li>
-  </ul>
+  </ul> -->
+  <AppHeader></AppHeader>
+  <router-view></router-view>
 </template>
 
 
 <script>
 import axios from 'axios';
+import AppHeader from './components/HeaderComponent.vue';
 export default {
   name: "App",
+  components:{
+        AppHeader
+  },
   data(){
     return {
       title: "hello world",
@@ -36,6 +42,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
