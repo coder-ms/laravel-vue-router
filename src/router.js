@@ -43,8 +43,6 @@ const router = createRouter({
             component: NotFound
         },
     ]
-    
-
 });
 
 export {router};

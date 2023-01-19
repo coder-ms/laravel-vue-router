@@ -1,9 +1,4 @@
 
-// COLORS
-$bg-color: #ff0000;
-$text-color: #333;
-
-
 @use './partials/variables' as *;
 
 $fa-font-path: '../webfonts';
@@ -13,6 +8,7 @@ $fa-font-path: '../webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 
-body{
-    background-color: $bg-color;
+.router-link-active,  .router-link-exact-active, .active{
+    color: #ff0000 !important;
 }
+
