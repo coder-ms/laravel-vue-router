@@ -1,7 +1,8 @@
 <template>
+  <section>
     <h1>PostList</h1>
     <div class="row">
-      <div class="col-12 col-md-3" v-for="(post, index) in posts" :key="index">
+      <div class="col-12 col-md-3" v-for="(post, index) in posts" :key="index"> 
         <div class="card">
           <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
           <div class="card-body">
@@ -14,7 +15,8 @@
         </div>
       </div>
     </div>
-   </template>
+  </section>
+</template>
      
      
    <script>
@@ -27,6 +29,8 @@
           return{
             store,
             posts:[],
+            currentPage: 1,
+            latPage:null,
             contentMaxLen: 100
           }
         },
