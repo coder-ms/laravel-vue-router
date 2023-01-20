@@ -13,7 +13,7 @@
             {{ item.label }}
           </router-link>
         </li>
-        <li class="nav-itm">
+        <li class="nav-item">
           <a href="http://localhost:8000" class="nav-link">Accedi</a>
         </li>
       </ul>

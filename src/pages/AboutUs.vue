@@ -1,8 +1,31 @@
 <template>
-<h1 class="text-center">About Us</h1>
-<div class="row">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sapiente? Aperiam reprehenderit non neque! Dignissimos iusto similique beatae non dolores? Tenetur sint, nulla magnam provident minima placeat nemo eos animi odit amet velit vero ipsa quia, corrupti ducimus exercitationem architecto itaque, consequuntur a facere eius. Quod optio deserunt facere totam ducimus cupiditate molestias suscipit doloremque exercitationem delectus aut, est nobis obcaecati vero praesentium, voluptate inventore similique culpa? Ducimus modi fuga exercitationem ipsa nemo recusandae. Quod dolor porro, harum aliquam eligendi, odio impedit fuga debitis error distinctio voluptas tempora dolorum maxime fugiat in. Iusto dolor autem quibusdam eum voluptatibus nam at nemo repellendus veritatis consequuntur odit magnam vero eveniet perferendis culpa corrupti molestiae officia, facere delectus. Cupiditate mollitia accusamus eum. Autem, iste, fugit fuga non optio est placeat deserunt nesciunt doloremque libero quis corrupti ad consequuntur nisi cumque, perspiciatis maxime sint odio dolor illum dicta sed? Id laborum ullam soluta iste iure voluptates at voluptatibus odio explicabo ipsam provident aliquam quibusdam distinctio fugiat, velit quidem. Magni iusto, obcaecati consectetur modi nisi inventore? Harum laboriosam repellendus minima quo tenetur quas ipsa ipsam, tempore nesciunt dolorem voluptatum beatae magnam corrupti dolore, dolores et! Est numquam tenetur sunt delectus nulla necessitatibus minus reprehenderit odio eveniet illo explicabo iste at tempora animi dolores asperiores velit beatae, dolore sed. Ea adipisci facilis hic saepe labore ipsa optio sequi ex, vitae non rem tempora. Libero debitis sequi delectus odit dicta aliquid magnam voluptas, illum quia quasi nam voluptate suscipit adipisci dolorum minima temporibus. Nisi adipisci rem voluptatum maiores temporibus facilis consectetur sed debitis et a commodi nesciunt consequuntur quisquam doloremque voluptatem aspernatur, inventore impedit placeat quis omnis labore. Eligendi quibusdam, unde amet harum rem iure. Rem enim odit, aliquid, dolorem eveniet repellendus distinctio laborum eligendi beatae sed nemo corporis nam neque saepe et veniam quia. Error, quasi.</p>
-</div>
+  <div class="col-12 d-flex">
+    <div class="col-6 p-5 d-flex">
+      <div class="col-4">
+          <img class="mt-2 mb-2" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Ada_Lovelace_color.svg" alt="Ada Lovelace Byron">
+          <img class="mt-2 mb-2" src="https://upload.wikimedia.org/wikipedia/commons/8/82/CharlesBabbage.jpg" alt="Charles babbage">
+      </div>
+    </div>
+    <div class="info col-6 py-5 px-5 bg-black mt-4">
+      <h1 class="text-white">HOME PAGE</h1>
+      <h3 class="mt-3 mb-3">Boolean Programmer</h3>
+      <h5><i>Boolean</i></h5>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, harum blanditiis! Blanditiis sint obcaecati asperiores id, beatae eaque eveniet dicta exercitationem natus ratione nesciunt facilis, aperiam unde aliquam, magni architecto repellat perspiciatis! Recusandae tempora culpa omnis perferendis ex. Deleniti ea totam blanditiis quo et harum quibusdam cum beatae enim?</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corporis autem illo in, id, blanditiis, qui numquam nobis exercitationem at earum perferendis. Pariatur magni sit ab et laudantium nesciunt eius porro, qui repellat aliquam quo at, neque repudiandae doloribus! Natus explicabo ea et cupiditate dolorem incidunt odio necessitatibus illo maiores.</p>
+      <router-link class="btn btn-primary mt-3"  :to="{name: 'home'}">
+        Home
+      </router-link>
+
+      <router-link class="btn btn-primary ms-3 mt-3"  :to="{name: 'posts'}">
+          Guarda i posts
+      </router-link>
+    </div>
+  </div>
 </template>
      
      
