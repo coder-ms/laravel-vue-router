@@ -1,16 +1,25 @@
 <template>
   <section v-if="post">
-    <h1>{{ post.title }}</h1> 
-      <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
-    <p>{{ post.content }}</p>
-    <div v-if="post.category">
-      <h5>Category: {{ post.category.name }}</h5>
-    </div>
-    <div v-if="post.tags && post.tags.length">
-      <h5>Tags</h5>
-      <div>
-        <span v-for="(tag,index) in post.tags" :key="index" class="badge text-bg-info">{{ tag.name }}</span>
+    <h1 class="text-center">{{ post.title }}</h1> 
+    <div class="cardShow">
+      <div class="cardImageShow">
+        <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
       </div>
+        <div class="cardDescriptionShow">
+          <p>{{ post.content }}</p>
+          <div v-if="post.category">
+            <h5>Category: {{ post.category.name }}</h5>
+          </div>
+          <div v-if="post.tags && post.tags.length">
+            <h5>Tags</h5>
+            <div>
+              <span v-for="(tag,index) in post.tags" :key="index" class="badge text-bg-info">{{ tag.name }}</span>
+            </div>
+          </div>
+          <router-link class="btn btn-primary"  :to="{name: 'posts'}">
+              Torna all lista
+          </router-link>
+        </div>
     </div>
   </section>
   <section v-else>Loading...</section>

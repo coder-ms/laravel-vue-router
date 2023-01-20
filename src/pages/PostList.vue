@@ -1,9 +1,9 @@
 <template>
   <section>
-    <h1>PostList</h1>
+    <h1 class="text-center">PostList</h1>
     <div class="row">
       <div class="col-12 col-md-3" v-for="(post, index) in posts" :key="index"> 
-        <div class="card">
+        <div class="cardx">
           <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">{{post.title}}</h5>
