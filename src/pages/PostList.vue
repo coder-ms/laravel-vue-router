@@ -1,24 +1,22 @@
 <template>
   <section>
-    <h1 class="text-center">PostList</h1>
+    <h1 class="text-center mb-3">PostList</h1>
     <div class="row">
-      <div class="col-12 col-md-3" v-for="(post, index) in posts" :key="index"> 
-        <div class="cardx">
-          <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{post.title}}</h5>
-            <p class="card-text">{{ truncateContent(post.content) }}</p>
-            <router-link class="btn btn-primary"  :to="{name: 'single-post', params:{slug: post.slug}}">
-              Vedi il post
-            </router-link>
-          </div>
-        </div>
+      <div class="col-12 col-md-3" v-for="(post, index) in posts" :key="post.id"> 
+        <PostCard :post="post"/>
       </div>
     </div>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
-        <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-        <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getPosts(n)">{{ n }}</a></li>
+        <li class="page-item" :class="{'disabled' : currentPage === 1}">
+          <button class="page-link" :disabled="currentPage === 1" @click="getPosts(currentPage - 1)">Previous</button>
+        </li>
+        <li class="page-item" v-for="n in lastPage">
+          <button class="page-link" @click="getPosts(n)">{{ n }}</button>
+        </li>
+        <li class="page-item" :class="{'disabled' : currentPage === lastPage}">
+          <button class="page-link" :disabled="currentPage === lastPage" @click="getPosts(currentPage + 1)">Next</button>
+        </li>
       </ul>
     </nav>
   </section>
@@ -28,9 +26,13 @@
    <script>
     import axios from 'axios';
     import { store } from '../store';
+    import PostCard from '../components/PostCard.vue';
    
      export default {
         name: 'PostList',
+        components:{
+          PostCard
+        },
         data(){
           return{
             store,
@@ -38,7 +40,6 @@
             currentPage: 1,
             lastPage:null,
             totalPages: 0,
-            contentMaxLen: 100
           }
         },
         methods:{
@@ -50,14 +51,8 @@
               this.posts = response.data.results.data;
               this.currentPage = response.data.results.current_page;
               this.lastPage = response.data.results.last_page;
-              this.totalPages = response.data.results.totla_pages;
+              this.totalPages = response.data.results.total_pages;
             })
-          },
-          truncateContent(text){
-            if(text.length > this.contentMaxLen){
-              return text.substr(0, this.contentMaxLen) + '...';
-            }
-            return text;
           }
         },
         mounted(){

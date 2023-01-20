@@ -6,6 +6,7 @@
         <img :src="`${store.imageBasePath}${post.cover_image}`" :alt="post.title" class="card-img-top">
       </div>
         <div class="cardDescriptionShow">
+          <h4 class="mt-3">Descrizione: </h4>
           <p>{{ post.content }}</p>
           <div v-if="post.category">
             <h5>Category: {{ post.category.name }}</h5>
