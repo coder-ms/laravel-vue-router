@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="info col-6 py-5 px-5 bg-black mt-4">
-      <h1 class="text-white">HOME PAGE</h1>
+      <h1 class="text-white">CHI SONO</h1>
       <h3 class="mt-3 mb-3">Boolean Programmer</h3>
       <h5><i>Boolean</i></h5>
       <p class="mt-4 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, harum blanditiis! Blanditiis sint obcaecati asperiores id, beatae eaque eveniet dicta exercitationem natus ratione nesciunt facilis, aperiam unde aliquam, magni architecto repellat perspiciatis! Recusandae tempora culpa omnis perferendis ex. Deleniti ea totam blanditiis quo et harum quibusdam cum beatae enim?</p>
